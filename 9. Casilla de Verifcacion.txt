@@ -1,0 +1,14 @@
+ private void colocarCasillasDeVerificacion() {
+        JCheckBox casilla01=new JCheckBox("Cereal"); //variable 
+        casilla01.setBounds(20, 20, 100, 40); //posicion, ancho y altura
+        panel01.add(casilla01); //resultado de la casilla de verificacion
+        
+        JCheckBox casilla02=new JCheckBox("Leche"); //variable 
+        casilla02.setBounds(20, 50, 100, 40); //posicion, ancho y altura
+        panel01.add(casilla02); //resultado de la casilla de verificacion
+        
+        JCheckBox casilla03=new JCheckBox("Pan"); //variable 
+        casilla03.setBounds(20, 80, 100, 40); //posicion, ancho y altura
+        panel01.add(casilla03); //resultado de la casilla de verificacion
+        
+    }

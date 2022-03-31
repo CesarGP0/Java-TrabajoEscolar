@@ -1,0 +1,23 @@
+private void colorcarBotones(){
+        JButton boton01=new JButton(); //crea un nuevo boton01
+        boton01.setText("CLICK"); //Establece el texto
+        boton01.setBounds(100, 100, 100, 40); //posicion del boton, ancho y altura
+        boton01.setEnabled(true); 
+        boton01.setMnemonic('q');
+        boton01.setForeground(Color.BLUE); //color del texto del boton
+        boton01.setBackground(Color.YELLOW); //color del fondo del boton
+        boton01.setFont(new Font("arial",3,20)); //tipo de fuente del texto y tamaño
+        panel01.add(boton01); //da el resultado del boton01
+        
+        JButton boton02=new JButton (); //crea un nuevo boton02
+        boton02.setBounds(100, 150, 100, 40); //posicion del boton, ancho y altura
+        ImageIcon siguiente=new ImageIcon("exit01.png"); //establece una imagen de fondo del boton
+        boton02.setIcon(new ImageIcon(siguiente.getImage().getScaledInstance(boton02.getWidth(),boton02.getHeight(),Image.SCALE_SMOOTH))); //dimensiones
+        panel01.add(boton02); //da el resultado del boton02
+        
+        
+        JButton boton03=new JButton(); //crea un nuevo boton03
+        boton03.setBounds(100,200,100,40 ); //posicion del boton, ancho y altura
+        boton03.setBorder(BorderFactory.createLineBorder(Color.blue, 5, true)); //ancho del borde y color
+        panel01.add(boton03); //da el resultado del boton03
+    }

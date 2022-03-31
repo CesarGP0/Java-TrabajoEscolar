@@ -1,0 +1,10 @@
+  private void colocarListaDesplegable(){
+        
+        String [] paises={"mexico","belice"}; //atributos para la lista
+        JComboBox listadesplegable=new JComboBox(paises); //cracion de la variable del desplegable
+        listadesplegable.setBounds(20,20,100,30); //posicion, ancho y altura
+        listadesplegable.addItem("USA"); //añadir item
+        listadesplegable.setSelectedItem("    ..."); //opcion extra
+        panel01.add(listadesplegable); //resultado de la lista desplegable
+        
+    }

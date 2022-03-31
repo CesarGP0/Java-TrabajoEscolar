@@ -1,0 +1,20 @@
+private void keylistener(){
+        KeyListener eventoTeclado = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent ke) {
+                areaTexto.append("KeyTyped\n"); //funciona con caracteres unicode
+            }
+
+            @Override
+            public void keyPressed(KeyEvent ke) {
+                areaTexto.append("KeyPressed\n"); // funciona al dejar precionado cualquier tecla
+            }
+
+            @Override
+            public void keyReleased(KeyEvent ke) {
+                areaTexto.append("KeyReased\n"); //funciona al presionar cualquier tecla
+            }
+        };
+        
+       cajaTexto.addKeyListener(eventoTeclado); //eventos se ejecutaran en la cajaTexto
+    }

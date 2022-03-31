@@ -1,0 +1,16 @@
+  private void  eventoRuedaDelRaton(){
+       MouseWheelListener ruedaRaton = new MouseWheelListener() {
+           @Override
+           public void mouseWheelMoved(MouseWheelEvent mwe) {
+               if(mwe.getPreciseWheelRotation()== -1){
+               areaTexto.append("Rueda hacia arriba\n");
+               }
+               if(mwe.getPreciseWheelRotation()== 1){
+               areaTexto.append("Rueda hacia abajo\n");
+               }
+           }
+       };
+          
+       
+       panel01.addMouseWheelListener(ruedaRaton);
+   } 

@@ -1,0 +1,18 @@
+
+import java.awt.Color;     //PERMITE MANEJAR COLORES EN LA CLASE COLOR
+import java.awt.Dimension; //SIRVE PARA ALMACENAR EL ANCHO Y ALTO DE UN COMPONENTE
+import javax.swing.JFrame; //SIRVE PARA GENERAR LAS VENTANAS
+
+public class Ventana extends JFrame{ 
+    public Ventana(){
+        this.setSize(500,500);         //DEFINES LAS DIMENSIONES DE LA VENTANA AL INICIAR
+        setTitle("Mi primer ventana"); //TITULO PARA LA VENTANA
+        //set.Location(100,200);       //DIMENSIONES PARA LA VENTANA
+        //setBounds(100, 100, 500, 500); //CONVINA EL SETSIZE Y EL LOCATION EN UNA LINEA
+        setLocationRelativeTo(null);     //CENTRA LA VENTANA
+        //setResizable(false);            //QUEDA FIJO EL TAMAÑO DE LA VENTANA
+        setMinimumSize(new Dimension(200,200));   //QUEDAN FIJAS LAS DIMENSIONES AL INTETAR REDUCIRLA
+        //this.getContentPane().setBackground(Color.red);    //SE DA UN COLOR PARA LA VENTANA
+        setDefaultCloseOperation(EXIT_ON_CLOSE);   //LINEA PARA FINALIZAR EL CODIGO POR COMPLETO
+    }
+}

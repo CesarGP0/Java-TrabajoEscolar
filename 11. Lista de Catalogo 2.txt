@@ -1,0 +1,35 @@
+   private void colocarListaDesplegable(){
+        
+       /* String [] paises={"mexico","belice"}; //atributos para la lista
+        JComboBox listadesplegable=new JComboBox(paises); //cracion de la variable del desplegable
+        listadesplegable.setBounds(20,20,100,30); //posicion, ancho y altura
+        listadesplegable.addItem("USA"); //añadir item
+        listadesplegable.setSelectedItem("    ..."); //opcion extra
+        panel01.add(listadesplegable); //resultado de la lista desplegable */
+    
+        Persona persona01=new Persona("Cesar",21,"Mexicano");    //creacion de persona y sus atributos
+        Persona persona02=new Persona("Jonathan",19,"Mexicano");
+        Persona persona03=new Persona("Julio",30,"Mexicano");
+        Persona persona04=new Persona("Miguel",28,"Mexicano");
+        Persona persona05=new Persona("Claudia",39,"Mexicano");
+        Persona persona06=new Persona("Edgar",43,"Mexicano");
+        Persona persona07=new Persona("Erika",34,"Mexicano");
+        Persona persona08=new Persona("Ivan",18,"Mexicano");
+        Persona persona09=new Persona("Margarita",37,"Mexicano");
+        Persona persona10=new Persona("Timmi",48,"Mexicano");
+       
+        DefaultComboBoxModel modelo=new DefaultComboBoxModel(); //creacion del combobox
+        modelo.addElement(persona01);  //llamando la variable para imprimir el resultado
+        modelo.addElement(persona03); 
+        modelo.addElement(persona04);
+        modelo.addElement(persona05);
+        modelo.addElement(persona06);
+        modelo.addElement(persona07);
+        modelo.addElement(persona08);
+        modelo.addElement(persona09);
+        modelo.addElement(persona10);
+       
+        JComboBox listadesplegable=new JComboBox(modelo); 
+        listadesplegable.setBounds(20,20,100,30);  //posicion, ancho y altura
+       panel01.add(listadesplegable); //resultado del combobox listadesplegable
+    }

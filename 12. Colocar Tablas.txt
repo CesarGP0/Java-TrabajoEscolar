@@ -1,0 +1,49 @@
+   private void colocarTablas (){
+       
+        DefaultTableModel modelo=new DefaultTableModel(); //se crea la tabla
+        
+        modelo.addColumn("Nombre");   //se añanden las columnas
+        modelo.addColumn("Edad");
+        modelo.addColumn("Nacionalidad");
+         
+        String[] persona01={"Cesar","21","Mexicano"};    //registro
+        String[] persona02={"Jonathan","19","Mexicano"};
+        String[] persona03={"Julio","30","Mexicano"};
+        String[] persona04={"Miguel","28","Mexicano"};
+        String[] persona05={"Claudia","39","Mexicano"};
+        String[] persona06={"Edgar","43","Mexicano"};
+        String[] persona07={"Erika","34","Mexicano"};
+        String[] persona08={"Ivan","18","Mexicano"};
+        String[] persona09={"Margarita","37","Mexicano"};
+        String[] persona10={"Timmi","48","Mexicano"};
+        String[] persona11={"Timmi","48","Mexicano"};
+        String[] persona12={"Timmi","48","Mexicano"};
+        String[] persona13={"Timmi","48","Mexicano"};
+        String[] persona14={"Timmi","48","Mexicano"};
+       String[] persona15={"Timmi","48","Mexicano"};
+      
+        modelo.addRow(persona01); //imprimir resultado del registro
+        modelo.addRow(persona02); 
+        modelo.addRow(persona03); 
+        modelo.addRow(persona04); 
+        modelo.addRow(persona05); 
+        modelo.addRow(persona06); 
+        modelo.addRow(persona07); 
+        modelo.addRow(persona08); 
+        modelo.addRow(persona09); 
+        modelo.addRow(persona10); 
+        modelo.addRow(persona11); 
+        modelo.addRow(persona12); 
+        modelo.addRow(persona13); 
+        modelo.addRow(persona14); 
+        modelo.addRow(persona15); 
+       
+        JTable tabla=new JTable(modelo); 
+        
+       tabla.setBounds(20, 20, 300, 200);  //posicion, ancho y altura
+       panel01.add(tabla); //resultado dde la tabla con los regitros
+       
+       JScrollPane scroll=new JScrollPane(tabla,ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED); //se crea el scroll
+    scroll.setBounds(20,20,300,200); //posicion, ancho y altura
+    panel01.add(scroll); 
+    }

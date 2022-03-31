@@ -1,0 +1,23 @@
+  private void colocarBotonesDeactivacion() {
+     JToggleButton activacion01=new JToggleButton("Opcion 01",false);   
+     activacion01.setBounds(50,100,100,50);
+     activacion01.setFont(new Font("arial",3,12));//tipo de letra para el radio boton
+     activacion01.setBorder(BorderFactory.createLineBorder(Color.orange, 5, true));
+     panel01.add(activacion01); //da el resultado del boton de activacion
+     
+      JToggleButton activacion02=new JToggleButton("Opcion 02",false);   
+     activacion02.setBounds(50,160,100,50);
+     activacion02.setFont(new Font("arial",3,12)); //tipo de letra para el radio boton
+     activacion02.setForeground(Color.BLUE);
+     panel01.add(activacion02); //da el resultado del boton de activacion
+     
+      JToggleButton activacion03=new JToggleButton("opcion 03",false);   
+     activacion03.setBounds(50,220,100,50);
+     activacion03.setBackground(Color.YELLOW);
+     panel01.add(activacion03); //da el resultado del boton de activacion
+     
+     ButtonGroup grupo02=new ButtonGroup(); //se agrupan los botones de activacion
+     grupo02.add(activacion01);
+     grupo02.add(activacion02);
+     grupo02.add(activacion03);
+    }

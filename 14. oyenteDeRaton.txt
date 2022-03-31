@@ -1,0 +1,31 @@
+    
+    private void eventoDeRaton(){ 
+         MouseListener oyRaton = new MouseListener() { //creacion de la variable de mouselistener
+             @Override
+             public void mouseClicked(MouseEvent me) { // se activa al dejar de presionar el boton
+               areaTexto.append("mousecliked\n"); //texto que se va a mostrar en la areaTexto
+             }
+
+             @Override
+             public void mousePressed(MouseEvent me) { //se activa cuando el boton se mantiene presionado
+                  areaTexto.append("mousepressed\n"); //texto que se va a mostrar en la areaTexto
+             }
+
+             @Override
+             public void mouseReleased(MouseEvent me) { //se activa cuando el boton deja de ser presionado 
+                 areaTexto.append("mousereleased\n"); //texto que se va a mostrar en la areaTexto
+             }
+
+             @Override
+             public void mouseEntered(MouseEvent me) { //se activa cuando pasas el mouse por el boton
+                 areaTexto.append("mouseentered\n"); //texto que se va a mostrar en la areaTexto
+             }
+
+             @Override
+             public void mouseExited(MouseEvent me) { //se activa cuando sale el mouse del boton 
+                 areaTexto.append("mouseexited\n"); //texto que se va a mostrar en la areaTexto
+             }
+         };
+             
+        boton01.addMouseListener(oyRaton); //resultado del boton
+}

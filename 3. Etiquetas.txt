@@ -1,0 +1,24 @@
+    private void colocarEtiquetas(){
+        //Etiqueta 1 etiqueta de texto
+        JLabel etiqueta=new JLabel(); //declara la etiqueta
+        etiqueta.setText("Hola"); //etiqueta con el texto
+        etiqueta.setHorizontalAlignment(SwingConstants.CENTER);//alineas el texto en el label
+        etiqueta.setBounds(10, 10, 100, 30);//posicion de la etiqueta, ancho y altura
+        etiqueta.setForeground(Color.yellow);//color del texto
+        etiqueta.setOpaque(true); //quita las restricciones 
+        etiqueta.setBackground(Color.green);//color de fondo de la etiqueta 
+        etiqueta.setFont(new Font("arial",Font.BOLD,20)); //tipo de fuente del texto y tamaño
+        panel01.add(etiqueta); //da el resiltado de la etiqueta en el JPanel
+    
+    
+    //Etiqueta 02 etiqueta de imagen
+    //ImageIcon imagen=new ImageIcon ("exit01.png");
+    
+    ImageIcon imagen=new ImageIcon("exit01.png"); //Imagen
+    JLabel etiqueta01=new JLabel(); //declara la etiqueta
+    etiqueta01.setBounds(10, 80, 100, 100); //posicion de la etiqueta, ancho y altura
+    etiqueta01.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta01.getWidth(), etiqueta01.getHeight(), Image.SCALE_SMOOTH))); // tamaño de la imagen tomando los valores de la etiqueta
+    panel01.add(etiqueta01); //da el resiltado de la etiqueta en el JPanel
+    
+    
+    }

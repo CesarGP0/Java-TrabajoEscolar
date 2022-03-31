@@ -1,0 +1,45 @@
+    private void colocarPaneles(){ 
+        panel01=new JPanel(); //declara nombre del JPanel
+        //panel01.setBackground(Color.orange);
+        panel01.setLayout(null); //JPanel fijo
+        this.getContentPane().add(panel01); //se inserta el JPanel en el JFrame
+    }
+ 
+    private void proyectoetiqueta () {
+        JLabel etiqueta=new JLabel(); //declara la etiqueta
+        etiqueta.setText("Ingresa su nombre"); //etiqueta con el texto
+        etiqueta.setHorizontalAlignment(SwingConstants.CENTER);//alineas el texto en el label
+        etiqueta.setBounds(140, 50, 200, 30);//posicion de la etiqueta, ancho y altura
+        etiqueta.setFont(new Font("arial",Font.BOLD,20)); //tipo de fuente del texto y tamaño
+        panel01.add(etiqueta); //da el resiltado de la etiqueta en el JPanel
+    
+    }
+    
+    private void proyectocaja () {
+        cajaTexto = new JTextField ();
+        cajaTexto.setBounds(140,130,200,30); //posicion, ancho y altura
+        panel01.add(cajaTexto); //resultado de la caja de texto
+    }   
+
+    private void proyectoboton () {
+        boton01 = new JButton ();
+        boton01.setText("Enviar"); //Establece el texto
+        boton01.setBounds(190, 180, 100, 40); //posicion del boton, ancho y altura
+        boton01.setFont(new Font("arial",3,20)); //tipo de fuente del texto y tamaño
+        panel01.add(boton01); //da el resultado del boton01
+       
+        saludo=new JLabel();
+        saludo.setBounds(50,220,300,40);
+        saludo.setFont(new Font("Script MT Bold",1,20));
+        panel01.add(saludo);
+
+
+/// agregar evento 
+      ActionListener oyAccion=new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+        saludo.setText("Hola "+cajaTexto.getText()); 
+    }
+     };
+
+boton01.addActionListener(oyAccion); //impresion del resultado del action
+}

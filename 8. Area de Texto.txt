@@ -1,0 +1,15 @@
+ private void colocarAreaDeTexto(){
+        JTextArea areaTexto= new JTextArea();//creacion de la variable 
+        areaTexto.setBounds(50,50,300,200); //posicion, ancho y altura
+        areaTexto.setText("Escribe aqui..."); //texto de output
+        areaTexto.setEditable(true);
+        System.out.println("El texto es: " +areaTexto.getText()); //texto de output
+        panel01.add(areaTexto); //resultado de la area de texto
+        
+        JScrollPane barraDesplazamiento=new JScrollPane(areaTexto); //creacion de las barras desplazamiento
+        barraDesplazamiento.setBounds(50,50,300,200); //posicion, ancho y altura
+        barraDesplazamiento.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED); //barra de desplazamiento vertical
+        barraDesplazamiento.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED); //barra de desplazamiento horizontal
+        panel01.add(barraDesplazamiento); //resultado de las barras de desplazamiento 
+        
+    }

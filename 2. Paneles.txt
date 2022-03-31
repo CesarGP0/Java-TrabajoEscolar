@@ -1,0 +1,11 @@
+    private void iniciarcomponentes(){ //clase
+   colocarPaneles();            //colocas las clases
+   colocarEtiquetas();           //clase de etiquetas
+    }
+    
+    private void colocarPaneles(){ 
+        panel01=new JPanel(); //declara nombre del JPanel
+        //panel01.setBackground(Color.orange); //color para el JPanel
+        panel01.setLayout(null); //JPanel fijo
+        this.getContentPane().add(panel01); //se inserta el JPanel en el JFrame
+    }

@@ -1,0 +1,96 @@
+ private void colorcarEtiqueta(){
+          etiqueta = new JLabel("Escoja su deporte favorito");
+          etiqueta.setBounds(20, 10, 250, 40);
+          etiqueta.setFont(new Font("arial",0,18));
+          panel01.add(etiqueta);
+      }
+
+
+private void colocarRadioBotones(){
+  rb1 = new JRadioButton("Fútbol");
+  rb1.setBounds(20, 80, 100, 40);
+  rb1.setFont(new Font("arial",0,18));
+  panel01.add(rb1);
+  
+  rb2 = new JRadioButton("Basketball");
+  rb2.setBounds(20, 140, 120, 40);
+  rb2.setFont(new Font("arial",0,18));
+  panel01.add(rb2);
+  
+  
+  rb3 = new JRadioButton("Beisbol");
+  rb3.setBounds(20, 200, 120, 40);
+  rb3.setFont(new Font("arial",0,18));
+  panel01.add(rb3);
+  
+  rb4 = new JRadioButton("Americano");
+  rb4.setBounds(20, 260, 120, 40);
+  rb4.setFont(new Font("arial",0,18));
+  panel01.add(rb4);
+  
+  ButtonGroup grupo = new ButtonGroup();
+  
+  grupo.add(rb1);
+    grupo.add(rb2);
+  grupo.add(rb3);
+      grupo.add(rb4);
+
+  
+  eventoDeImg();
+}
+
+   private void  eventoDeImg(){
+       imagen = new JLabel();
+       imagen.setBounds(200, 80, 300, 200);
+       panel01.add(imagen);
+       
+       final ImageIcon imagenfutbol = new ImageIcon(getClass().getResource("/img/futbol.png"));
+       final ImageIcon imagenbask = new ImageIcon(getClass().getResource("/img/bask.png"));
+        final ImageIcon imagenbeisbol = new ImageIcon(getClass().getResource("/img/beisbol.png"));
+         final ImageIcon imagenamericano = new ImageIcon(getClass().getResource("/img/americano.png"));
+       
+   ActionListener eventoA = new ActionListener() {
+       @Override
+       public void actionPerformed(ActionEvent ae) {
+           imagen.setIcon(new ImageIcon(imagenfutbol.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_SMOOTH)));
+       }
+   };
+       
+       
+       rb1.addActionListener(eventoA);
+       
+       ///////////////////////////////////////////////
+       ActionListener eventoB = new ActionListener() {
+       @Override
+       public void actionPerformed(ActionEvent ae) {
+           imagen.setIcon(new ImageIcon(imagenbask.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_SMOOTH)));
+       }
+   };
+       
+       
+       rb2.addActionListener(eventoB);
+       
+       
+        ///////////////////////////////////////////////
+       ActionListener eventoC = new ActionListener() {
+       @Override
+       public void actionPerformed(ActionEvent ae) {
+           imagen.setIcon(new ImageIcon(imagenbeisbol.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_SMOOTH)));
+       }
+   };
+       
+       
+       rb3.addActionListener(eventoC);
+       
+       
+        ///////////////////////////////////////////////
+       ActionListener eventoD = new ActionListener() {
+       @Override
+       public void actionPerformed(ActionEvent ae) {
+           imagen.setIcon(new ImageIcon(imagenamericano.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_SMOOTH)));
+       }
+   };
+       
+       
+       rb4.addActionListener(eventoD);
+}

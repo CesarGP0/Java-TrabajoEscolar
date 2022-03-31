@@ -1,0 +1,53 @@
+ private void boton(){
+    
+        boton01 = new JButton ();
+        boton01.setText("Ascendente"); //Establece el texto
+        boton01.setBounds(180, 320, 150, 40); //posicion del boton, ancho y altura
+        boton01.setFont(new Font("arial",3,20)); //tipo de fuente del texto y tamaño
+        panel01.add(boton01); //da el resultado del boton01
+        
+        boton02 = new JButton ();
+        boton02.setText("Descendente"); //Establece el texto
+        boton02.setBounds(180, 400, 160, 40); //posicion del boton, ancho y altura
+        boton02.setFont(new Font("arial",3,20)); //tipo de fuente del texto y tamaño
+        panel01.add(boton02); //da el resultado del boton01
+    
+       eventoDeAccion();
+       eventoDeAccio();
+       }
+       
+    private void  eventoDeAccion(){
+        ActionListener evAccion = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+               contador++;
+               if(contador == 1){
+etiqueta.setText("Has presionado el boton 1 vez");                   
+               }
+               else {
+            etiqueta.setText("Has presionado el boton "+contador+" veces");        
+               }
+            }
+        };
+       
+        
+        boton01.addActionListener(evAccion);
+    }
+    
+      private void  eventoDeAccio(){
+        ActionListener evAccion = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+               contador--;
+               if(contador == 1){
+etiqueta.setText("Has presionado el boton 1 vez");                   
+               }
+               else {
+            etiqueta.setText("Has presionado el boton "+contador+" veces");        
+               }
+            }
+        };
+       
+        
+        boton02.addActionListener(evAccion);
+    }

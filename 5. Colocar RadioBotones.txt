@@ -1,0 +1,21 @@
+ private void colocarRadioBotones() {
+        JRadioButton radioBoton01=new JRadioButton("Opcion01",true); //se crea el radioboton
+        radioBoton01.setBounds(50, 100, 110, 30); //posicion, ancho y altura
+        radioBoton01.setEnabled(false);
+        radioBoton01.setText("Porgramacion"); //texto de la opcion
+        radioBoton01.setFont(new Font("arial",1,12)); //tipo de letra para el radio boton
+        panel01.add(radioBoton01); //da el resultado del radioboton
+        
+        JRadioButton radioBoton02=new JRadioButton("Opcion02", false); //se crea el radioboton
+        radioBoton02.setBounds(50, 150, 100, 30); //posicion, ancho y altura
+        panel01.add(radioBoton02); //da el resultado del radioboton
+        
+        JRadioButton radioBoton03=new JRadioButton("Opcion02", false); //se crea el radioboton
+        radioBoton03.setBounds(50, 200, 100, 30); //posicion, ancho y altura
+        panel01.add(radioBoton03); //da el resultado del radioboton
+        
+        ButtonGroup grupo01=new ButtonGroup (); //se agrupan los radio botones
+        grupo01.add(radioBoton01);
+        grupo01.add(radioBoton02);
+        grupo01.add(radioBoton03);
+    }

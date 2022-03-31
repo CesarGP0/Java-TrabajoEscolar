@@ -1,0 +1,7 @@
+ private void colocarCajaDeTexto() {
+        JTextField cajaTexto=new JTextField();
+       cajaTexto.setBounds(50,100,200,30); //posicion, ancho y altura
+        cajaTexto.setText("Hola mundo"); //Texto 
+        System.out.println("EL texto de la aja es:" +cajaTexto.getText()); //mensaje en output
+        panel01.add(cajaTexto); //resultado de la caja de texto
+    }
